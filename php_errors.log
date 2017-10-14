@@ -1,0 +1,10 @@
+[14-Oct-2017 15:08:32 UTC] WordPress データベースエラー: The used table type doesn't support FULLTEXT indexes for query CREATE TABLE IF NOT EXISTS wp_mail_bank_email_logs
+				(
+					`id` int(11) NOT NULL AUTO_INCREMENT,
+					`email_data` longtext NOT NULL,
+					PRIMARY KEY (`id`),
+                                        FULLTEXT (`email_data`)
+				)
+				ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 made by activate_plugin, do_action('activate_wp-mail-bank/wp-mail-bank.php'), WP_Hook->do_action, WP_Hook->apply_filters, call_user_func_array, install_script_for_mail_bank, include_once('/plugins/wp-mail-bank/lib/install-script.php'), mail_bank_email_logs_table, dbDelta
+[14-Oct-2017 15:09:07 UTC] WordPress データベースエラー: Table 'c9.wp_mail_bank_email_logs' doesn't exist for query SELECT email_data FROM wp_mail_bank_email_logs
+                                             ORDER BY id DESC made by wp_dashboard, do_meta_boxes, call_user_func, dashboard_widget_function_mail_bank, include_once('/plugins/wp-mail-bank/lib/dashboard-widget.php')
